@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+}
+#headerbg {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(res/headerbg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 60px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.322);
+    height: 13vh;
+}
+
+#vigyapix_logo {
+    background-image: url(res/vigyapix_logo.png);
+    background-size: contain;
+    background-position: top left;
+    background-repeat: no-repeat;
+    height: 120px;  
+    width: 300px;  
+    margin-top: -50px;
+}
+
+#nav {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    margin-top: -40px; 
+}
+
+#nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+#nav a:hover {
+    color: #ffd700;
+}
+#hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+#landing_pic{
+    background-image: url(res/landing_pic.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    position: absolute;
+    top: 50%;       
+    left: 60%;      
+    transform: translate(-50%, -50%);
+    height: 80vh;  
+    width: 80vw;
+    z-index: 2; 
+}
+
+
+@media (max-width: 830px) {
+    #header {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    #vigyapix_logo {
+    display: flex;
+    flex-direction: column;
+    background-size: contain;
+    background-position: top left;
+    background-repeat: no-repeat;
+        
+    
+    margin: 0 auto; 
+    margin-top: -40px;
+    margin-left: 0;
+    }
+    #headerbg {
+        background-image: url(res/headerbg_mobile.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center top;
+        
+    }
+    #nav {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -250px; 
+        height: 100%;
+        width: 250px;
+        background: #222;
+        padding: 60px 20px;
+        transition: right 0.3s ease;
+        z-index: 999;
+    }
+    #nav.show {
+        right: 0;
+    }
+
+    #nav a {
+        font-size: 1.1rem;
+    }
+    #hamburger{
+        display: block;
+        position: absolute;
+        top: 28px;
+        right: 30px;
+    }
+}
+
+
